@@ -7,20 +7,14 @@
     <div class="container hero-grid">
         <div class="hero-content">
             <h1>
-                <span class="hero-greeting">Soy</span>
+                <span class="hero-greeting" data-i18n="hero.iam">Soy</span>
                 <span class="hero-name" data-i18n="hero.name">Miguel Carmona</span>
             </h1>
 
             <p class="hero-description">
-                <span class="hero-highlight" data-i18n="hero.descriptionLead">
-                    Ingeniero en Sistemas especializado en desarrollo web
-                </span>
-                <span data-i18n="hero.descriptionBody">
-                    , enfocado en construir, mantener y mejorar aplicaciones,
-                </span>
-                <span class="hero-highlight" data-i18n="hero.descriptionHighlight">
-                    APIs e integraciones con bases de datos y servicios externos.
-                </span>
+                <span class="hero-highlight" data-i18n="hero.descriptionLead">Ingeniero en Sistemas especializado en desarrollo web</span>
+                <span data-i18n="hero.descriptionBody">, enfocado en construir, mantener y mejorar aplicaciones,</span>
+                <span class="hero-highlight" data-i18n="hero.descriptionHighlight">APIs e integraciones con bases de datos y servicios externos.</span>
             </p>
 
             <div class="hero-actions">
@@ -37,7 +31,7 @@
                         <path d="M4 4h16v16H4z"></path>
                         <path d="m4 7 8 5 8-5"></path>
                     </svg>
-                    <span data-i18n="hero.contactButton">Contactarme</span>
+                    <span data-i18n="hero.contactButton">Contáctame</span>
                 </a>
 
                 <a href="#" target="_blank" rel="noopener" class="button button-secondary">
