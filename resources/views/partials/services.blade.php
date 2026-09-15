@@ -17,17 +17,17 @@
         </div>
         <div class="services-grid">
             <article class="service-card">
-                <span class="service-number">01</span>
-                <h3 data-i18n="services.item1.title">Desarrollo PHP / Laravel</h3>
-                <p data-i18n="services.item1.text">Desarrollo y mantenimiento de aplicaciones web utilizando PHP y Laravel.</p>
+                {{-- <span class="service-number">01</span> --}}
+                <h3 data-i18n="services.item1.title">Desarrollo Web</h3>
+                <p data-i18n="services.item1.text">Desarrollo y mantenimiento de aplicaciones web.</p>
             </article>
             <article class="service-card">
-                <span class="service-number">02</span>
+                {{-- <span class="service-number">02</span> --}}
                 <h3 data-i18n="services.item2.title">Mantenimiento y debugging</h3>
                 <p data-i18n="services.item2.text">Análisis de errores, resolución de problemas y mejoras sobre aplicaciones existentes.</p>
             </article>
             <article class="service-card">
-                <span class="service-number">03</span>
+                {{-- <span class="service-number">03</span> --}}
                 <h3 data-i18n="services.item3.title">APIs e integraciones</h3>
                 <p data-i18n="services.item3.text">Integración con APIs externas y comunicación entre diferentes sistemas.</p>
             </article>

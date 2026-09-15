@@ -11,7 +11,7 @@
         <div class="footer-links">
             <a href="#home" data-i18n="footer.home">Inicio</a>
             <a href="#projects" data-i18n="footer.projects">Proyectos</a>
-            <a href="#contact" data-i18n="footer.contact">Contacto</a>
+            <a href="mailto:miguelcar18@gmail.com" target="_blank" data-i18n="footer.contact">Contacto</a>
         </div>
     </div>
 </footer>

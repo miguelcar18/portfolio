@@ -5,12 +5,12 @@
         @include('partials.header')
         <main>
             @include('partials.hero')
-            {{-- @include('partials.about-me')  --}}
+            {{-- @include('partials.about-me') --}}
             @include('partials.skills')
             @include('partials.work-experience')
             @include('partials.projects')
             @include('partials.services')
-            @include('partials.contact')
+            {{-- @include('partials.contact') --}}
         </main>
         @include('partials.footer')
 

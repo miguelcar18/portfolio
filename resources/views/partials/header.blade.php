@@ -16,10 +16,10 @@
 
         <nav class="nav">
             <div class="nav-links">
-                <a href="#technologies" data-section="technologies" data-i18n="nav.technologies">Tecnologías</a>
+                <a href="#technologies" data-section="technologies" data-i18n="nav.technologies">Stack técnico</a>
                 <a href="#experience" data-section="experience" data-i18n="nav.experience">Experiencia</a>
                 <a href="#projects" data-section="projects" data-i18n="nav.projects">Proyectos</a>
-                <a href="#contact" data-section="contact" data-i18n="nav.contact">Contacto</a>
+                <a href="mailto:miguelcar18@gmail.com" data-section="contact" data-i18n="nav.contact" target="_blank">Contacto</a>
             </div>
         </nav>
 

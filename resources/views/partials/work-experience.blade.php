@@ -21,41 +21,34 @@
         <div class="timeline">
             <article class="timeline-item">
                 <span class="timeline-dot"></span>
-                <span class="timeline-date">2019</span>
+                <span class="timeline-date" data-i18n="experience.item3.date">Agosto 2019 — Mayo 2026</span>
                 <div class="timeline-content">
-                    <h3 data-i18n="experience.item1.title">El comienzo</h3>
-                    <div class="timeline-company">Databyte</div>
-                    <p data-i18n="experience.item1.text">Inicio de mi etapa profesional trabajando en desarrollo web y soporte técnico, participando en el mantenimiento de aplicaciones y sitios web.</p>
+                    <h3 data-i18n="experience.item3.title">Desarrollador Full Stack</h3>
+                    <div class="timeline-company">DATABYTE S.A</div>
+                    <p data-i18n="experience.item3.text1">Responsable del diseño arquitectónico, evolución y mantenimiento de sistemas basados en PHP y Laravel (v8 - v12).</p><br>
+                    <p data-i18n="experience.item3.text2">Ingeniería, integración y uso de servicios RESTful/APIs de plataformas de comercio electrónico (Mercado Libre, Falabella, Walmart) para sincronización masiva de inventario, actualización de catálogos y procesamiento automático de órdenes.</p><br>
+                    <p data-i18n="experience.item3.text3">Soporte técnico básico y mantenimiento de cuentas en cPanel y WHM. Resolución de incidencias, incluyendo diagnóstico de problemas de envío y recepción de correos electrónicos.</p>
                 </div>
             </article>
 
             <article class="timeline-item">
                 <span class="timeline-dot"></span>
-                <span class="timeline-date">2020 — 2022</span>
+                <span class="timeline-date" data-i18n="experience.item2.date">Junio 2014 — Julio 2021</span>
                 <div class="timeline-content">
-                    <h3 data-i18n="experience.item2.title">Más desarrollo, menos soporte</h3>
-                    <div class="timeline-company">Databyte</div>
-                    <p data-i18n="experience.item2.text">Mayor participación en desarrollo y mantenimiento de aplicaciones PHP, trabajando con bases de datos y resolución de problemas en sistemas existentes.</p>
+                    <h3 data-i18n="experience.item2.title">Desarrollador Full Stack</h3>
+                    <div class="timeline-company">HISPANOS SOLUCIONES C.A.</div>
+                    <p data-i18n="experience.item2.text">Diseño, desarrollo e implementación de sistemas y plataformas web a medida, asegurando el rendimiento, la escalabilidad y las buenas prácticas del código, asumiendo roles de supervisión técnica y coordinación de proyectos.</p>
                 </div>
             </article>
 
             <article class="timeline-item">
                 <span class="timeline-dot"></span>
-                <span class="timeline-date">2022 — 2024</span>
+                <span class="timeline-date" data-i18n="experience.item1.date">Enero 20114 — Enero 2013</span>
                 <div class="timeline-content">
-                    <h3 data-i18n="experience.item3.title">Integraciones y APIs</h3>
-                    <div class="timeline-company">Databyte</div>
-                    <p data-i18n="experience.item3.text">Trabajo con Laravel, APIs externas, marketplaces, procesos de sincronización e integración entre diferentes sistemas.</p>
-                </div>
-            </article>
-
-            <article class="timeline-item">
-                <span class="timeline-dot"></span>
-                <span class="timeline-date">2024 — Actualidad</span>
-                <div class="timeline-content">
-                    <h3 data-i18n="experience.item4.title">Especialización en Laravel</h3>
-                    <div class="timeline-company">PHP / Laravel</div>
-                    <p data-i18n="experience.item4.text">Enfoque cada vez mayor en Laravel, mantenimiento de aplicaciones existentes, APIs, Eloquent, bases de datos, jobs, procesos programados e integraciones.</p>
+                    <h3 data-i18n="experience.item1.title">Coordinador (E) de Informática</h3>
+                    <div class="timeline-company">DIRECCIÓN REGIONAL DE SALUD MONAGAS.</div>
+                    <p data-i18n="experience.item1.text1">Diseño, desarrollo y evolución de software a medida, orientadas a la mejora y automatizaciónde procesos operativos, nóminas e inventario.</p><br>
+                    <p data-i18n="experience.item1.text2">Mayor participación en desarrollo y mantenimiento de aplicaciones PHP, trabajando con bases de datos y resolución de problemas en sistemas existentes.</p>
                 </div>
             </article>
         </div>

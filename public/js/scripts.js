@@ -4,7 +4,7 @@
 
 const projects = [
     {
-        title: "Top10Books",
+        title: "Proyecto Ejemplo 1",
         description: "Aplicación e integración orientada a la gestión de productos, pedidos y comunicación entre diferentes sistemas.",
         tags: ["PHP", "Laravel", "MySQL", "API"],
         categories: ["php", "laravel", "database", "api"],
@@ -12,7 +12,7 @@ const projects = [
         preview: "#"
     },
     {
-        title: "Integración Qubia",
+        title: "Integración proyecto ejemplo 2",
         description: "Integración de productos y datos de Magento con una plataforma externa, incluyendo reglas de sincronización y procesos automatizados.",
         tags: ["PHP", "Laravel", "Magento", "API"],
         categories: ["php", "laravel", "api"],
@@ -108,7 +108,7 @@ const projects = [
 const translations = {
     es: {
         "nav.about": "Sobre mí",
-        "nav.technologies": "Tecnologías",
+        "nav.technologies": "Stack técnico",
         "nav.experience": "Experiencia",
         "nav.projects": "Proyectos",
         "nav.contact": "Contacto",
@@ -120,6 +120,7 @@ const translations = {
         "hero.descriptionHighlight": "APIs e integraciones con bases de datos y servicios externos.",
         "hero.projectsButton": "Ver mis proyectos",
         "hero.contactButton": "Contáctame",
+        "hero.downloadCv": "Descargar CV",
 
         "about.kicker": "Sobre mí",
         "about.title": "Desarrollo soluciones, no solo código.",
@@ -129,27 +130,31 @@ const translations = {
         "about.p1": "Me siento especialmente cómodo trabajando sobre aplicaciones existentes: entender cómo funcionan, encontrar errores, corregirlos y realizar cambios sin romper funcionalidades que ya están en producción.",
         "about.p2": "También tengo experiencia trabajando con bases de datos, APIs REST, integraciones externas, procesos programados y herramientas de desarrollo.",
 
-        "tech.kicker": "Tecnologías",
+        "tech.kicker": "Stack técnico",
         "tech.title": "Herramientas con las que trabajo",
         "tech.description": "Un resumen de las principales tecnologías y herramientas que forman parte de mi experiencia.",
         "tech.languages": "Lenguajes",
         "tech.backend": "Backend & Frameworks",
         "tech.database": "Bases de datos",
-        "tech.devops": "DevOps & Herramientas",
+        "tech.devops": "Herramientas e Infraestructura",
         "tech.ecommerce": "E-commerce & Integraciones",
         "tech.tools": "Herramientas",
 
         "experience.kicker": "Experiencia laboral",
         "experience.title": "Mi historia trabajando con tecnología",
         "experience.description": "Una visión resumida de mi evolución profesional.",
-        "experience.item1.title": "El comienzo",
-        "experience.item1.text": "Inicio de mi etapa profesional trabajando en desarrollo web y soporte técnico, participando en el mantenimiento de aplicaciones y sitios web.",
-        "experience.item2.title": "Más desarrollo, menos soporte",
-        "experience.item2.text": "Mayor participación en desarrollo y mantenimiento de aplicaciones PHP, trabajando con bases de datos y resolución de problemas en sistemas existentes.",
-        "experience.item3.title": "Integraciones y APIs",
-        "experience.item3.text": "Trabajo con Laravel, APIs externas, marketplaces, procesos de sincronización e integración entre diferentes sistemas.",
-        "experience.item4.title": "Especialización en Laravel",
-        "experience.item4.text": "Enfoque cada vez mayor en Laravel, mantenimiento de aplicaciones existentes, APIs, Eloquent, bases de datos, jobs, procesos programados e integraciones.",
+        "experience.item1.date": "Enero 2011 — Enero 2013",
+        "experience.item1.title": "Coordinador (E) de Informática",
+        "experience.item1.text1": "Diseño, desarrollo y evolución de software a medida, orientadas a la mejora y automatizaciónde procesos operativos, nóminas e inventario.",
+        "experience.item1.text2": "Diagnóstico, reparación y optimización de equipos de cómputo (hardware y software), garantizando su máximo rendimiento y prolongando su ciclo de vida operativo.",
+        "experience.item2.date": "Junio 2014 — Julio 2021",
+        "experience.item2.title": "Desarrollador Full Stack",
+        "experience.item2.text": "Diseño, desarrollo e implementación de sistemas y plataformas web a medida, asegurando el rendimiento, la escalabilidad y las buenas prácticas del código, asumiendo roles de supervisión técnica y coordinación de proyectos.",
+        "experience.item3.date": "Agosto 2019 — Mayo 2026",
+        "experience.item3.title": "Desarrollador Full Stack",
+        "experience.item3.text1": "Responsable del diseño arquitectónico, evolución y mantenimiento de sistemas basados en PHP y Laravel (v8 - v12).",
+        "experience.item3.text2": "Ingeniería, integración y uso de servicios RESTful/APIs de plataformas de comercio electrónico (Mercado Libre, Falabella, Walmart) para sincronización masiva de inventario, actualización de catálogos y procesamiento automático de órdenes.",
+        "experience.item3.text3": "Soporte técnico básico y mantenimiento de cuentas en cPanel y WHM. Resolución de incidencias, incluyendo diagnóstico de problemas de envío y recepción de correos electrónicos.",
 
         "projects.kicker": "Proyectos",
         "projects.title": "Algunos proyectos en los que he trabajado",
@@ -165,7 +170,7 @@ const translations = {
 
         "services.kicker": "Servicios",
         "services.title": "En qué puedo ayudarte",
-        "services.item1.title": "Desarrollo PHP / Laravel",
+        "services.item1.title": "Desarrollo Web",
         "services.item1.text": "Desarrollo y mantenimiento de aplicaciones web utilizando PHP y Laravel.",
         "services.item2.title": "Mantenimiento y debugging",
         "services.item2.text": "Análisis de errores, resolución de problemas y mejoras sobre aplicaciones existentes.",
@@ -178,13 +183,13 @@ const translations = {
 
         "footer.rights": "Todos los derechos reservados.",
         "footer.home": "Inicio",
-        "footer.projects": "Proyectos",
+        "footer.projects": "Stack técnico",
         "footer.contact": "Contacto"
     },
 
     en: {
         "nav.about": "About me",
-        "nav.technologies": "Technologies",
+        "nav.technologies": "Tech stack",
         "nav.experience": "Experience",
         "nav.projects": "Projects",
         "nav.contact": "Contact",
@@ -196,6 +201,7 @@ const translations = {
         "hero.descriptionHighlight": "APIs and integrations with databases and external services.",
         "hero.projectsButton": "View my projects",
         "hero.contactButton": "Contact me",
+        "hero.downloadCv": "Download CV",
 
         "about.kicker": "About me",
         "about.title": "I build solutions, not just code.",
@@ -205,27 +211,31 @@ const translations = {
         "about.p1": "I feel especially comfortable working on existing applications: understanding how they work, finding issues, fixing them and making changes without breaking functionality already in production.",
         "about.p2": "I also have experience working with databases, REST APIs, external integrations, scheduled processes and development tools.",
 
-        "tech.kicker": "Technologies",
+        "tech.kicker": "Tech stack",
         "tech.title": "Tools I work with",
         "tech.description": "A summary of the main technologies and tools that are part of my experience.",
         "tech.languages": "Languages",
         "tech.backend": "Backend & Frameworks",
         "tech.database": "Databases",
-        "tech.devops": "DevOps & Tools",
+        "tech.devops": "Tools and Infrastructure",
         "tech.ecommerce": "E-commerce & Integrations",
         "tech.tools": "Tools",
 
         "experience.kicker": "Work experience",
         "experience.title": "My journey working with technology",
         "experience.description": "A brief overview of my professional evolution.",
-        "experience.item1.title": "The beginning",
-        "experience.item1.text": "The beginning of my professional career working in web development and technical support, participating in application and website maintenance.",
-        "experience.item2.title": "More development, less support",
-        "experience.item2.text": "Greater involvement in PHP application development and maintenance, working with databases and troubleshooting existing systems.",
-        "experience.item3.title": "Integrations and APIs",
-        "experience.item3.text": "Working with Laravel, external APIs, marketplaces, synchronization processes and integrations between different systems.",
-        "experience.item4.title": "Laravel specialization",
-        "experience.item4.text": "Increasing focus on Laravel, maintenance of existing applications, APIs, Eloquent, databases, jobs, scheduled processes and integrations.",
+        "experience.item1.date": "January 2011 — January 2013",
+        "experience.item1.title": "Acting IT Coordinator",
+        "experience.item1.text1": "Designed, developed, and evolved custom software to improve and automate operational processes, payroll, and inventory.",
+        "experience.item1.text2": "Diagnosed, repaired, and optimized computer equipment (hardware and software), ensuring maximum performance and extending its operational lifespan.",
+        "experience.item2.date": "June 2014 — July 2021",
+        "experience.item2.title": "Full Stack Developer",
+        "experience.item2.text": "Designed, developed, and implemented custom web systems and platforms, ensuring performance, scalability, and adherence to coding best practices, while taking on technical supervision and project coordination responsibilities.",
+        "experience.item3.date": "August 2019 — May 2026",
+        "experience.item3.title": "Full Stack Developer",
+        "experience.item3.text1": "Responsible for designing, developing, evolving, and maintaining systems based on PHP and Laravel (v8 - v12).",
+        "experience.item3.text2": "Development, integration, and use of RESTful APIs from e-commerce platforms (Mercado Libre, Falabella, and Walmart) for large-scale inventory synchronization, catalog updates, and automated order processing.",
+        "experience.item3.text3": "Basic technical support and account maintenance in cPanel and WHM. Incident resolution, including diagnosing email sending and receiving issues.",
 
         "projects.kicker": "Projects",
         "projects.title": "Some projects I've worked on",
@@ -241,8 +251,8 @@ const translations = {
 
         "services.kicker": "Services",
         "services.title": "How I can help",
-        "services.item1.title": "PHP / Laravel Development",
-        "services.item1.text": "Development and maintenance of web applications using PHP and Laravel.",
+        "services.item1.title": "Web Development",
+        "services.item1.text": "Development and maintenance of web applications.",
         "services.item2.title": "Maintenance & debugging",
         "services.item2.text": "Issue analysis, troubleshooting and improvements to existing applications.",
         "services.item3.title": "APIs & integrations",
@@ -254,7 +264,7 @@ const translations = {
 
         "footer.rights": "All rights reserved.",
         "footer.home": "Home",
-        "footer.projects": "Projects",
+        "footer.projects": "Tech stack",
         "footer.contact": "Contact"
     }
 };
@@ -311,6 +321,11 @@ function applyTranslations() {
 
     languageToggle.textContent = currentLanguage === "es" ? "EN" : "ES";
     document.documentElement.lang = currentLanguage;
+
+    const downloadCvBtn = document.getElementById("downloadCvBtn");
+    if (downloadCvBtn) {
+        downloadCvBtn.href = `/download-cv/${currentLanguage}`;
+    }
 }
 
 languageToggle.addEventListener("click", () => {
@@ -319,8 +334,9 @@ languageToggle.addEventListener("click", () => {
 
     applyTranslations();
     renderProjects();
-}
-);
+});
+
+document.addEventListener("DOMContentLoaded", applyTranslations);
 
 /* =========================================================
     PROJECTS
