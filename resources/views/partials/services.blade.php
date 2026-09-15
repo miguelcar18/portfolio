@@ -2,10 +2,10 @@
     SERVICIOS
 ====================================================== -->
 
-<section id="servicios" class="section">
+<section id="services" class="section">
     <div class="container">
         <div class="section-heading">
-            <div class="section-kicker">
+            <h2 class="section-kicker">
                 <span class="section-kicker-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 3v18" />
@@ -13,8 +13,7 @@
                     </svg>
                 </span>
                 <span class="section-kicker-text" data-i18n="services.kicker">Servicios</span>
-            </div>
-            <h2 class="section-title" data-i18n="services.title">En qué puedo ayudarte</h2>
+            </h2>
         </div>
         <div class="services-grid">
             <article class="service-card">

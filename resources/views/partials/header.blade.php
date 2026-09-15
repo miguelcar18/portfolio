@@ -3,7 +3,7 @@
 ======================================================== -->
 <header class="header">
     <div class="container header-inner">
-        <a href="#inicio" class="logo">
+        <a href="#home" class="logo">
             <span class="logo-mark">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="m8 9-3 3 3 3"></path>
@@ -16,11 +16,10 @@
 
         <nav class="nav">
             <div class="nav-links">
-                <a href="#sobre-mi" data-section="sobre-mi" data-i18n="nav.about">Sobre mí</a>
-                <a href="#tecnologias" data-section="tecnologias" data-i18n="nav.technologies">Tecnologías</a>
-                <a href="#experiencia" data-section="experiencia" data-i18n="nav.experience">Experiencia</a>
-                <a href="#proyectos" data-section="proyectos" data-i18n="nav.projects">Proyectos</a>
-                <a href="#contacto" data-section="contacto" data-i18n="nav.contact">Contacto</a>
+                <a href="#technologies" data-section="technologies" data-i18n="nav.technologies">Tecnologías</a>
+                <a href="#experience" data-section="experience" data-i18n="nav.experience">Experiencia</a>
+                <a href="#projects" data-section="projects" data-i18n="nav.projects">Proyectos</a>
+                <a href="#contact" data-section="contact" data-i18n="nav.contact">Contacto</a>
             </div>
         </nav>
 

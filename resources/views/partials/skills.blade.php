@@ -2,10 +2,10 @@
     TECNOLOGÍAS
 ====================================================== -->
 
-<section id="tecnologias" class="section">
+<section id="technologies" class="section">
     <div class="container">
         <div class="section-heading">
-            <div class="section-kicker">
+            <h2 class="section-kicker">
                 <span class="section-kicker-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <path d="m8 9-3 3 3 3" />
@@ -14,9 +14,7 @@
                     </svg>
                 </span>
                 <span class="section-kicker-text" data-i18n="tech.kicker">Tecnologías</span>
-            </div>
-            <h2 class="section-title" data-i18n="tech.title">Herramientas con las que trabajo</h2>
-            <p class="section-description" data-i18n="tech.description">Un resumen de las principales tecnologías y herramientas que forman parte de mi experiencia.</p>
+            </h2>
         </div>
 
         <div class="tech-grid">
@@ -42,7 +40,7 @@
             <article class="tech-card">
                 <div class="tech-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <rect x="3" y="4" width="18" height="16" rx="3"/>
+                        <rect x="3" y="4" width="18" height="16" rx="3" />
                         <path d="M7 8h10M7 12h6M7 16h8" />
                     </svg>
                 </div>
@@ -61,7 +59,7 @@
             <article class="tech-card">
                 <div class="tech-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                        <ellipse cx="12" cy="5" rx="8" ry="3" />
                         <path d="M4 5v7c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
                         <path d="M4 12v7c0 1.66 3.58 3 8 3s8-1.34 8-3v-7" />
                     </svg>
@@ -74,7 +72,7 @@
                 </div>
             </article>
 
-             <!-- DevOps -->
+            <!-- DevOps -->
             <article class="tech-card">
                 <div class="tech-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">

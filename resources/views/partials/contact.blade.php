@@ -2,7 +2,7 @@
     CONTACTO
 ====================================================== -->
 
-<section id="contacto" class="section">
+<section id="contact" class="section">
     <div class="container">
         <div class="contact-box">
             <h2 data-i18n="contact.title">¿Tienes un proyecto o una oportunidad?</h2>

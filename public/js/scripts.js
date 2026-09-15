@@ -139,18 +139,10 @@ const translations = {
         "nav.projects": "Proyectos",
         "nav.contact": "Contacto",
 
-        "hero.available":
-            "Disponible para trabajar",
-
-        "hero.hey":
-            "Soy Miguel Carmona.",
-
-        "hero.role":
-            "Desarrollo web con PHP y Laravel.",
-
-        "hero.description":
-            "Ingeniero en Sistemas especializado en desarrollo web, principalmente con PHP y Laravel. Me enfoco en construir, mantener y mejorar aplicaciones, APIs e integraciones con bases de datos y servicios externos.",
-
+        "hero.name": "Miguel Carmona",
+        "hero.descriptionLead": "Ingeniero en Sistemas especializado en desarrollo web",
+        "hero.descriptionBody": ", enfocado en construir, mantener y mejorar aplicaciones,",
+        "hero.descriptionHighlight": "APIs e integraciones con bases de datos y servicios externos.",
         "hero.projectsButton":
             "Ver mis proyectos",
 
@@ -329,17 +321,10 @@ const translations = {
         "nav.contact":
             "Contact",
 
-        "hero.available":
-            "Available for work",
-
-        "hero.hey":
-            "I'm Miguel Carmona.",
-
-        "hero.role":
-            "Web development with PHP and Laravel.",
-
-        "hero.description":
-            "Systems Engineer specialized in web development, mainly with PHP and Laravel. I focus on building, maintaining and improving applications, APIs and integrations with databases and external services.",
+        "hero.name": "Miguel Carmona",
+        "hero.descriptionLead": "Systems Engineer specialized in web development",
+        "hero.descriptionBody": ", focused on building, maintaining and improving applications,",
+        "hero.descriptionHighlight": "APIs and integrations with databases and external services.",
 
         "hero.projectsButton":
             "View my projects",
@@ -654,29 +639,29 @@ function getFilteredProjects() {
 
 function projectPreview() {
     return `
-    <div class="project-preview">
+        <div class="project-preview">
 
-        <div class="preview-browser">
-        <span></span>
-        <span></span>
-        <span></span>
+          <div class="preview-browser">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="preview-content">
+
+            <div class="line"></div>
+            <div class="line small"></div>
+
+            <div class="blocks">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+          </div>
+
         </div>
-
-        <div class="preview-content">
-
-        <div class="line"></div>
-        <div class="line small"></div>
-
-        <div class="blocks">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
-        </div>
-
-    </div>
-    `;
+      `;
 }
 
 
@@ -709,139 +694,139 @@ function renderProjects() {
 
             article.innerHTML = `
 
-        <div class="project-image">
+            <div class="project-image">
 
-            <div class="project-image-placeholder">
-            ${projectPreview()}
+              <div class="project-image-placeholder">
+                ${projectPreview()}
+              </div>
+
             </div>
 
-        </div>
+            <div class="project-content">
 
-        <div class="project-content">
+              <h3 class="project-title">
+                ${project.title}
+              </h3>
 
-            <h3 class="project-title">
-            ${project.title}
-            </h3>
+              <p class="project-description">
+                ${project.description}
+              </p>
 
-            <p class="project-description">
-            ${project.description}
-            </p>
+              <div class="project-tags">
 
-            <div class="project-tags">
-
-            ${project.tags
+                ${project.tags
                     .map(
                         (tag) =>
                             `<span class="project-tag">${tag}</span>`
                     )
                     .join("")}
 
-            </div>
+              </div>
 
-            <div class="project-footer">
+              <div class="project-footer">
 
-            ${project.code &&
+                ${project.code &&
                     project.code !== "#"
                     ? `
-                    <a
-                    href="${project.code}"
-                    target="_blank"
-                    rel="noopener"
-                    class="project-link"
-                    >
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="m8 9-3 3 3 3"></path>
-                        <path d="m16 9 3 3-3 3"></path>
-                        <path d="m14 5-4 14"></path>
-                    </svg>
+                      <a
+                        href="${project.code}"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="m8 9-3 3 3 3"></path>
+                          <path d="m16 9 3 3-3 3"></path>
+                          <path d="m14 5-4 14"></path>
+                        </svg>
 
-                    ${dictionary["projects.code"]}
-                    </a>
-                `
+                        ${dictionary["projects.code"]}
+                      </a>
+                    `
                     : `
-                    <a
-                    href="#"
-                    class="project-link"
-                    onclick="return false;"
-                    >
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="m8 9-3 3 3 3"></path>
-                        <path d="m16 9 3 3-3 3"></path>
-                        <path d="m14 5-4 14"></path>
-                    </svg>
+                      <a
+                        href="#"
+                        class="project-link"
+                        onclick="return false;"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="m8 9-3 3 3 3"></path>
+                          <path d="m16 9 3 3-3 3"></path>
+                          <path d="m14 5-4 14"></path>
+                        </svg>
 
-                    ${dictionary["projects.code"]}
-                    </a>
-                `
+                        ${dictionary["projects.code"]}
+                      </a>
+                    `
                 }
 
-            ${project.preview &&
+                ${project.preview &&
                     project.preview !== "#"
                     ? `
-                    <a
-                    href="${project.preview}"
-                    target="_blank"
-                    rel="noopener"
-                    class="project-link primary"
-                    >
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="M14 3h7v7"></path>
-                        <path d="M10 14 21 3"></path>
-                        <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
-                    </svg>
+                      <a
+                        href="${project.preview}"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link primary"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M14 3h7v7"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+                        </svg>
 
-                    ${dictionary["projects.preview"]}
-                    </a>
-                `
+                        ${dictionary["projects.preview"]}
+                      </a>
+                    `
                     : `
-                    <a
-                    href="#"
-                    class="project-link primary"
-                    onclick="return false;"
-                    >
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="M14 3h7v7"></path>
-                        <path d="M10 14 21 3"></path>
-                        <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
-                    </svg>
+                      <a
+                        href="#"
+                        class="project-link primary"
+                        onclick="return false;"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M14 3h7v7"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+                        </svg>
 
-                    ${dictionary["projects.preview"]}
-                    </a>
-                `
+                        ${dictionary["projects.preview"]}
+                      </a>
+                    `
                 }
 
-            </div>
+              </div>
 
-        </div>
-        `;
+            </div>
+          `;
 
             projectsList.appendChild(
                 article
@@ -1004,7 +989,91 @@ sections.forEach(
 
 
 /* =========================================================
-    SCROLL TOP
+   HERO PARTICLES
+========================================================= */
+
+const particleCanvas = document.getElementById("heroParticles");
+const particleContext = particleCanvas.getContext("2d");
+let particles = [];
+let particleAnimationFrame;
+
+function resizeParticleCanvas() {
+    const rect = particleCanvas.getBoundingClientRect();
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+    particleCanvas.width = Math.round(rect.width * ratio);
+    particleCanvas.height = Math.round(rect.height * ratio);
+    particleContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    const amount = Math.min(85, Math.max(34, Math.round((rect.width * rect.height) / 18000)));
+
+    particles = Array.from({ length: amount }, () => ({
+        x: Math.random() * rect.width,
+        y: Math.random() * rect.height,
+        radius: Math.random() * 2.2 + 1.1,
+        vx: (Math.random() - 0.5) * 0.22,
+        vy: (Math.random() - 0.5) * 0.22,
+        alpha: Math.random() * 0.35 + 0.55
+    }));
+}
+
+function drawParticles() {
+    const rect = particleCanvas.getBoundingClientRect();
+    particleContext.clearRect(0, 0, rect.width, rect.height);
+
+    particles.forEach((particle) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        if (particle.x < -10) particle.x = rect.width + 10;
+        if (particle.x > rect.width + 10) particle.x = -10;
+        if (particle.y < -10) particle.y = rect.height + 10;
+        if (particle.y > rect.height + 10) particle.y = -10;
+
+        particleContext.beginPath();
+        particleContext.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        particleContext.fillStyle = `rgba(37, 99, 235, ${particle.alpha})`;
+        particleContext.shadowColor = "rgba(37, 99, 235, 0.8)";
+        particleContext.shadowBlur = 7;
+        particleContext.fill();
+        particleContext.shadowBlur = 0;
+    });
+
+    for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 105) {
+                const opacity = (1 - distance / 105) * 0.38;
+                particleContext.beginPath();
+                particleContext.moveTo(particles[i].x, particles[i].y);
+                particleContext.lineTo(particles[j].x, particles[j].y);
+                particleContext.strokeStyle = `rgba(37, 99, 235, ${opacity})`;
+                particleContext.lineWidth = 1;
+                particleContext.stroke();
+            }
+        }
+    }
+
+    particleAnimationFrame = requestAnimationFrame(drawParticles);
+}
+
+resizeParticleCanvas();
+drawParticles();
+window.addEventListener("resize", resizeParticleCanvas, { passive: true });
+
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    cancelAnimationFrame(particleAnimationFrame);
+    particles.forEach((particle) => { particle.vx = 0; particle.vy = 0; });
+    drawParticles();
+    cancelAnimationFrame(particleAnimationFrame);
+}
+
+
+/* =========================================================
+   SCROLL TOP
 ========================================================= */
 
 const scrollTopButton =

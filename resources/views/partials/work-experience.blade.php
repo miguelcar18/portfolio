@@ -2,10 +2,10 @@
     EXPERIENCIA
 ====================================================== -->
 
-<section id="experiencia" class="section">
+<section id="experience" class="section">
     <div class="container">
         <div class="section-heading">
-            <div class="section-kicker">
+            <h2 class="section-kicker">
                 <span class="section-kicker-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="7" width="18" height="13" rx="2" />
@@ -15,9 +15,7 @@
                     </svg>
                 </span>
                 <span class="section-kicker-text" data-i18n="experience.kicker">Experiencia</span>
-            </div>
-            <h2 class="section-title" data-i18n="experience.title">Mi historia trabajando con tecnología</h2>
-            <p class="section-description" data-i18n="experience.description">Una visión resumida de mi evolución profesional.</p>
+            </h2>
         </div>
 
         <div class="timeline">
@@ -57,8 +55,7 @@
                 <div class="timeline-content">
                     <h3 data-i18n="experience.item4.title">Especialización en Laravel</h3>
                     <div class="timeline-company">PHP / Laravel</div>
-                    <p data-i18n="experience.item4.text">Enfoque cada vez mayor en Laravel, mantenimiento de aplicaciones existentes, APIs, Eloquent, bases de datos, jobs, procesos programados e
-                    integraciones.</p>
+                    <p data-i18n="experience.item4.text">Enfoque cada vez mayor en Laravel, mantenimiento de aplicaciones existentes, APIs, Eloquent, bases de datos, jobs, procesos programados e integraciones.</p>
                 </div>
             </article>
         </div>
