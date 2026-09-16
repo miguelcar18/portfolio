@@ -221,37 +221,41 @@ img {
 
 .logo {
     display: inline-flex;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
 
     font-size: 1.05rem;
     font-weight: 800;
     letter-spacing: -0.03em;
+    white-space: nowrap;
 }
 
 .logo-mark {
     width: 36px;
     height: 36px;
+    flex: 0 0 36px;
 
     display: grid;
     place-items: center;
+    overflow: hidden;
 
     border-radius: 11px;
 
     color: white;
 
-    background:
-        linear-gradient(135deg,
-            #0d3b82,
-            #2563eb);
+    /*background: linear-gradient(135deg, #0d3b82, #2563eb);*/
 
-    box-shadow:
-        0 7px 20px rgba(37, 99, 235, 0.28);
+    box-shadow: 0 7px 20px rgba(37, 99, 235, 0.28);
 }
 
-.logo-mark svg {
-    width: 19px;
-    height: 19px;
+.logo-mark img {
+    width: 36px;
+    height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+    object-fit: contain;
+    display: block;
 }
 
 .nav {
