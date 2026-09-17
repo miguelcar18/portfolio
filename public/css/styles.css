@@ -1829,7 +1829,6 @@ footer {
 
     .hero-grid {
         grid-template-columns: 1fr;
-
         gap: 50px;
     }
 
@@ -1850,7 +1849,7 @@ footer {
     }
 
     .services-grid,
-    .useful-sites-grid, {
+    .useful-sites-grid {
         grid-template-columns: 1fr;
     }
 }
