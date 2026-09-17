@@ -1,15 +1,13 @@
-<!-- =====================================================
-    SERVICIOS
-====================================================== -->
+{{-- SERVICIOS --}}
 
 <section id="services" class="section">
     <div class="container">
         <div class="section-heading">
             <h2 class="section-kicker">
                 <span class="section-kicker-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 3v18" />
-                        <path d="M17 7.5c0-1.7-1.8-3-5-3s-5 1.3-5 3 1.7 2.5 5 3 5 1.3 5 3-2 3-5 3-5-1.3-5-3" />
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M14.7 6.3a4.1 4.1 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4.1 4.1 0 0 0 5.4-5.4l-2.2 2.2-2.2-2.2 2.2-2.2Z" />
+                        <path d="m15 15 5 5" />
                     </svg>
                 </span>
                 <span class="section-kicker-text" data-i18n="services.kicker">Servicios</span>

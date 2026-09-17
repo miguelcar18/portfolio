@@ -111,6 +111,7 @@ const translations = {
         "nav.technologies": "Stack técnico",
         "nav.experience": "Experiencia",
         "nav.projects": "Proyectos",
+        "nav.usefulSites": "Sitios útiles",
         "nav.contact": "Contacto",
 
         "hero.iam": "Soy",
@@ -168,6 +169,11 @@ const translations = {
         "projects.code": "Código",
         "projects.preview": "Vista previa",
 
+        "usefulSites.kicker": "Sitios útiles",
+        "usefulSites.photopea": "Editor de imágenes en línea, útil para realizar ediciones rápidas sin instalar software.",
+        "usefulSites.textCompare": "Herramienta para comparar rápidamente dos textos y detectar diferencias.",
+        "usefulSites.unminify": "Utilidad para volver más legible código minificado y facilitar su revisión.",
+
         "services.kicker": "Servicios",
         "services.title": "En qué puedo ayudarte",
         "services.item1.title": "Desarrollo Web",
@@ -184,6 +190,7 @@ const translations = {
         "footer.rights": "Todos los derechos reservados.",
         "footer.home": "Inicio",
         "footer.projects": "Stack técnico",
+        "footer.usefulSites": "Sitios útiles",
         "footer.contact": "Contacto"
     },
 
@@ -192,6 +199,7 @@ const translations = {
         "nav.technologies": "Tech stack",
         "nav.experience": "Experience",
         "nav.projects": "Projects",
+        "nav.usefulSites": "Useful sites",
         "nav.contact": "Contact",
 
         "hero.iam": "I'm",
@@ -249,6 +257,11 @@ const translations = {
         "projects.code": "Code",
         "projects.preview": "Preview",
 
+        "usefulSites.kicker": "Useful sites",
+        "usefulSites.photopea": "Online image editor, useful for quick edits without installing software.",
+        "usefulSites.textCompare": "A tool for quickly comparing two texts and spotting differences.",
+        "usefulSites.unminify": "A utility for making minified code easier to read and review.",
+
         "services.kicker": "Services",
         "services.title": "How I can help",
         "services.item1.title": "Web Development",
@@ -264,7 +277,8 @@ const translations = {
 
         "footer.rights": "All rights reserved.",
         "footer.home": "Home",
-        "footer.projects": "Tech stack",
+        "footer.projects": "Projects",
+        "footer.usefulSites": "Useful sites",
         "footer.contact": "Contact"
     }
 };
@@ -284,6 +298,8 @@ function updateTheme() {
     const dark = isDark();
 
     document.documentElement.classList.toggle("dark", dark);
+    themeToggle.setAttribute("aria-label", dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
+    themeToggle.title = dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro";
 }
 
 themeToggle.addEventListener("click", () => {
@@ -291,15 +307,16 @@ themeToggle.addEventListener("click", () => {
 
     document.documentElement.classList.toggle("dark", dark);
     localStorage.setItem("theme", dark ? "dark" : "light");
-}
-);
+    updateTheme();
+});
 
+updateTheme();
 mediaQuery.addEventListener("change", (event) => {
     if (!localStorage.getItem("theme")) {
         document.documentElement.classList.toggle("dark", event.matches);
+        updateTheme();
     }
-}
-);
+});
 
 /* =========================================================
     LANGUAGE
@@ -319,24 +336,23 @@ function applyTranslations() {
         }
     });
 
-    languageToggle.textContent = currentLanguage === "es" ? "EN" : "ES";
-    document.documentElement.lang = currentLanguage;
+    const isSpanish = currentLanguage === "es";
 
-    const downloadCvBtn = document.getElementById("downloadCvBtn");
-    if (downloadCvBtn) {
-        downloadCvBtn.href = `/download-cv/${currentLanguage}`;
-    }
+    languageToggle.textContent = isSpanish ? "EN" : "ES";
+    languageToggle.setAttribute("aria-label", isSpanish ? "Cambiar a inglés" : "Switch to Spanish");
+    languageToggle.title = isSpanish ? "Cambiar a inglés" : "Switch to Spanish";
+
+    document.documentElement.lang = currentLanguage;
 }
 
 languageToggle.addEventListener("click", () => {
     currentLanguage = currentLanguage === "es" ? "en" : "es";
     localStorage.setItem("language", currentLanguage);
-
     applyTranslations();
     renderProjects();
 });
 
-document.addEventListener("DOMContentLoaded", applyTranslations);
+//document.addEventListener("DOMContentLoaded", applyTranslations);
 
 /* =========================================================
     PROJECTS
@@ -380,7 +396,7 @@ function projectPreview() {
           </div>
 
         </div>
-      `;
+    `;
 }
 
 function renderProjects() {
@@ -396,139 +412,62 @@ function renderProjects() {
 
         article.className = "project-card";
         article.innerHTML = `
-            <div class="project-image">
-
-              <div class="project-image-placeholder">
-                ${projectPreview()}
-              </div>
-
+            <div class="project-image" role="img" aria-label="Vista previa visual del proyecto ${project.title}" title="Vista previa visual de ${project.title}">
+                <div class="project-image-placeholder" aria-hidden="true">
+                    ${projectPreview()}
+                </div>
             </div>
-
             <div class="project-content">
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.description}</p>
+                <div class="project-tags">${project.tags.map((tag) =>`<span class="project-tag">${tag}</span>`).join("")}</div>
+                <div class="project-footer">
+                    ${project.code && project.code !== "#" 
+                        ? `
+                            <a href="${project.code}" target="_blank" rel="noopener" class="project-link" title="Ver código del proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                    <path d="m8 9-3 3 3 3"></path>
+                                    <path d="m16 9 3 3-3 3"></path>
+                                    <path d="m14 5-4 14"></path>
+                                </svg>
+                                ${dictionary["projects.code"]}
+                            </a>
+                        ` : `
+                            <a href="#" class="project-link" title="Código del proyecto no disponible" aria-disabled="true" onclick="return false;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                    <path d="m8 9-3 3 3 3"></path>
+                                    <path d="m16 9 3 3-3 3"></path>
+                                    <path d="m14 5-4 14"></path>
+                                </svg>
+                                ${dictionary["projects.code"]}
+                            </a>
+                        `
+                    }
 
-              <h3 class="project-title">
-                ${project.title}
-              </h3>
-
-              <p class="project-description">
-                ${project.description}
-              </p>
-
-              <div class="project-tags">
-
-                ${project.tags
-                .map(
-                    (tag) =>
-                        `<span class="project-tag">${tag}</span>`
-                )
-                .join("")}
-
-              </div>
-
-              <div class="project-footer">
-
-                ${project.code &&
-                project.code !== "#"
-                ? `
-                      <a
-                        href="${project.code}"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link"
-                      >
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="m8 9-3 3 3 3"></path>
-                          <path d="m16 9 3 3-3 3"></path>
-                          <path d="m14 5-4 14"></path>
-                        </svg>
-
-                        ${dictionary["projects.code"]}
-                      </a>
-                    `
-                : `
-                      <a
-                        href="#"
-                        class="project-link"
-                        onclick="return false;"
-                      >
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="m8 9-3 3 3 3"></path>
-                          <path d="m16 9 3 3-3 3"></path>
-                          <path d="m14 5-4 14"></path>
-                        </svg>
-
-                        ${dictionary["projects.code"]}
-                      </a>
-                    `
-            }
-
-                ${project.preview &&
-                project.preview !== "#"
-                ? `
-                      <a
-                        href="${project.preview}"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link primary"
-                      >
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M14 3h7v7"></path>
-                          <path d="M10 14 21 3"></path>
-                          <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
-                        </svg>
-
-                        ${dictionary["projects.preview"]}
-                      </a>
-                    `
-                : `
-                      <a
-                        href="#"
-                        class="project-link primary"
-                        onclick="return false;"
-                      >
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M14 3h7v7"></path>
-                          <path d="M10 14 21 3"></path>
-                          <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
-                        </svg>
-
-                        ${dictionary["projects.preview"]}
-                      </a>
-                    `
-            }
-
-              </div>
-
+                    ${project.preview && project.preview !== "#"
+                        ? `
+                            <a href="${project.preview}" target="_blank" rel="noopener" class="project-link primary" title="Ver vista previa del proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                    <path d="M14 3h7v7"></path>
+                                    <path d="M10 14 21 3"></path>
+                                    <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+                                </svg>
+                                ${dictionary["projects.preview"]}
+                            </a>
+                        ` : `
+                            <a href="#" class="project-link primary" title="Vista previa del proyecto no disponible" aria-disabled="true" onclick="return false;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                    <path d="M14 3h7v7"></path>
+                                    <path d="M10 14 21 3"></path>
+                                    <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+                                </svg>
+                                ${dictionary["projects.preview"]}
+                            </a>
+                        `
+                    }
+                </div>
             </div>
-          `;
+        `;
 
         projectsList.appendChild(article);
     });
@@ -549,19 +488,35 @@ function renderProjects() {
 }
 
 loadMoreButton.addEventListener("click", () => {
-    visibleCount += 2;
-    renderProjects();
-});
+        visibleCount += 2;
+        renderProjects();
+    }
+);
 
-resetProjectsButton.addEventListener("click", () => {
-    activeFilter = "all";
-    visibleCount = 2;
-    document.querySelectorAll(".filter-button").forEach((button) =>
-        button.classList.toggle("active", button.dataset.filter === "all")
-    );
+resetProjectsButton.addEventListener(
+    "click",
+    () => {
 
-    renderProjects();
-});
+        activeFilter = "all";
+
+        visibleCount = 2;
+
+        document
+            .querySelectorAll(
+                ".filter-button"
+            )
+            .forEach(
+                (button) =>
+                    button.classList.toggle(
+                        "active",
+                        button.dataset.filter ===
+                        "all"
+                    )
+            );
+
+        renderProjects();
+    }
+);
 
 document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -569,10 +524,7 @@ document.querySelectorAll(".filter-button").forEach((button) => {
         visibleCount = 2;
 
         document.querySelectorAll(".filter-button").forEach((item) =>
-            item.classList.toggle(
-                "active",
-                item === button
-            )
+            item.classList.toggle("active", item === button)
         );
 
         renderProjects();
@@ -589,7 +541,13 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             navLinks.forEach((link) => {
-                link.classList.toggle("active", link.dataset.section === entry.target.id);
+                const isActive = link.dataset.section === entry.target.id;
+                link.classList.toggle("active", isActive);
+                if (isActive) {
+                    link.setAttribute("aria-current", "page");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
             });
         }
     });

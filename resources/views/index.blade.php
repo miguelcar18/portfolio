@@ -2,6 +2,7 @@
 <html lang="es">
     @include('partials.head')
     <body>
+        <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
         @include('partials.header')
         <main>
             @include('partials.hero')
@@ -10,6 +11,7 @@
             @include('partials.work-experience')
             @include('partials.projects')
             @include('partials.services')
+            @include('partials.useful-sites')
             {{-- @include('partials.contact') --}}
         </main>
         @include('partials.footer')

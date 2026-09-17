@@ -1,13 +1,11 @@
-<!-- =====================================================
-    TECNOLOGÍAS
-====================================================== -->
+{{-- TECNOLOGÍAS --}}
 
 <section id="technologies" class="section">
     <div class="container">
         <div class="section-heading">
             <h2 class="section-kicker">
                 <span class="section-kicker-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                         <path d="m8 9-3 3 3 3" />
                         <path d="m16 9 3 3-3 3" />
                         <path d="m14 5-4 14" />
@@ -21,7 +19,7 @@
             <!-- Lenguajes -->
             <article class="tech-card">
                 <div class="tech-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
                         <path d="m8 9-3 3 3 3"></path>
                         <path d="m16 9 3 3-3 3"></path>
                         <path d="m14 5-4 14"></path>
@@ -41,7 +39,7 @@
             <!-- DB -->
             <article class="tech-card">
                 <div class="tech-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
                         <ellipse cx="12" cy="5" rx="8" ry="3" />
                         <path d="M4 5v7c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
                         <path d="M4 12v7c0 1.66 3.58 3 8 3s8-1.34 8-3v-7" />
@@ -57,7 +55,7 @@
             <!-- DevOps -->
             <article class="tech-card">
                 <div class="tech-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
                         <path d="M12 3v18"></path>
                         <path d="M5 8h14"></path>
                         <path d="M5 16h14"></path>

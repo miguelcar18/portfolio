@@ -1,13 +1,11 @@
-<!-- =====================================================
-    EXPERIENCIA
-====================================================== -->
+{{-- EXPERIENCIA --}}
 
 <section id="experience" class="section">
     <div class="container">
         <div class="section-heading">
             <h2 class="section-kicker">
                 <span class="section-kicker-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                         <rect x="3" y="7" width="18" height="13" rx="2" />
                         <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
                         <path d="M3 12h18" />
@@ -24,7 +22,9 @@
                 <span class="timeline-date" data-i18n="experience.item3.date">Agosto 2019 — Mayo 2026</span>
                 <div class="timeline-content">
                     <h3 data-i18n="experience.item3.title">Desarrollador Full Stack</h3>
-                    <div class="timeline-company">DATABYTE S.A</div>
+                    <div class="timeline-company">
+                        <a href="https://www.databyte.cl" title="Visitar el sitio web de Databyte" target="_blank">DATABYTE S.A</a>
+                    </div>
                     <p data-i18n="experience.item3.text1">Responsable del diseño arquitectónico, evolución y mantenimiento de sistemas basados en PHP y Laravel (v8 - v12).</p><br>
                     <p data-i18n="experience.item3.text2">Ingeniería, integración y uso de servicios RESTful/APIs de plataformas de comercio electrónico (Mercado Libre, Falabella, Walmart) para sincronización masiva de inventario, actualización de catálogos y procesamiento automático de órdenes.</p><br>
                     <p data-i18n="experience.item3.text3">Soporte técnico básico y mantenimiento de cuentas en cPanel y WHM. Resolución de incidencias, incluyendo diagnóstico de problemas de envío y recepción de correos electrónicos.</p>
@@ -36,7 +36,9 @@
                 <span class="timeline-date" data-i18n="experience.item2.date">Junio 2014 — Julio 2021</span>
                 <div class="timeline-content">
                     <h3 data-i18n="experience.item2.title">Desarrollador Full Stack</h3>
-                    <div class="timeline-company">HISPANOS SOLUCIONES C.A.</div>
+                    <div class="timeline-company">
+                        <a href="https://hispanossoluciones.com" title="Visitar el sitio web de Hispanos Soluciones C.A." target="_blank">HISPANOS SOLUCIONES C.A.</a>
+                    </div>
                     <p data-i18n="experience.item2.text">Diseño, desarrollo e implementación de sistemas y plataformas web a medida, asegurando el rendimiento, la escalabilidad y las buenas prácticas del código, asumiendo roles de supervisión técnica y coordinación de proyectos.</p>
                 </div>
             </article>
