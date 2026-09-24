@@ -954,21 +954,33 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
+    margin: 0;
+    padding: 0;
 }
 
 .tech-pill {
+    list-style: none;
+}
+
+.tech-pill {
+    display: inline-flex;
+    align-items: center;
     padding: 5px 9px;
-
     border-radius: 7px;
-
     background: var(--surface-soft);
-
     color: var(--text-secondary);
-
     font-size: 0.76rem;
     font-weight: 650;
-
     border: 1px solid var(--border);
+    transition: transform 0.18s ease, color 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tech-pill:hover {
+    transform: translateY(-2px);
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    background: var(--accent-soft);
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.10);
 }
 
 /* =========================================================
@@ -1126,6 +1138,14 @@ section {
     background: var(--surface);
 
     box-shadow: var(--shadow-sm);
+
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    box-shadow: var(--shadow);
 }
 
 .timeline-content h3 {
@@ -1533,13 +1553,14 @@ html.dark .project-image {
 
 .useful-sites-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
 .useful-site-card {
     display: flex;
     flex-direction: column;
+    min-width: 0;
     min-height: 190px;
     padding: 24px;
     border: 1px solid var(--border);
@@ -1556,19 +1577,22 @@ html.dark .project-image {
 }
 
 .useful-site-icon {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     display: grid;
     place-items: center;
     margin-bottom: 18px;
     border-radius: 12px;
-    color: var(--accent);
-    background: var(--accent-soft);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    overflow: hidden;
 }
 
-.useful-site-icon svg {
-    width: 21px;
-    height: 21px;
+.useful-site-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
 }
 
 .useful-site-card h3 {
@@ -1585,19 +1609,32 @@ html.dark .project-image {
 .useful-site-link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    align-self: flex-start;
     gap: 7px;
+    min-height: 38px;
     margin-top: auto;
-    color: var(--accent);
-    font-weight: 750;
+    padding: 0 12px;
+    border-radius: 9px;
+    color: #fff;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, #123d82, #2563eb);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
+    font-size: 0.78rem;
+    font-weight: 800;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .useful-site-link svg {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
 }
 
 .useful-site-link:hover {
-    text-decoration: underline;
+    color: #fff;
+    background: linear-gradient(135deg, #0d326e, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
 }
 
 /* =========================================================
@@ -1606,14 +1643,12 @@ html.dark .project-image {
 
 .services-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
 .service-card {
+    min-width: 0;
     padding: 27px;
 
     border-radius: var(--radius);
@@ -1623,17 +1658,31 @@ html.dark .project-image {
     background: var(--surface);
 
     box-shadow: var(--shadow-sm);
+
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.service-number {
-    display: block;
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+    box-shadow: var(--shadow);
+}
 
+.service-icon {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
     margin-bottom: 22px;
-
+    border-radius: 12px;
     color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+}
 
-    font-size: 0.75rem;
-    font-weight: 850;
+.service-icon svg {
+    width: 22px;
+    height: 22px;
 }
 
 .service-card h3 {
@@ -1982,5 +2031,14 @@ footer {
     #scrollTop {
         right: 18px;
         bottom: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline-content,
+    .service-card,
+    .tech-pill,
+    .useful-site-card {
+        transition: none;
     }
 }

@@ -122,6 +122,19 @@ const translations = {
         "hero.projectsButton": "Ver mis proyectos",
         "hero.contactButton": "Contáctame",
         "hero.downloadCv": "Descargar CV",
+        "hero.projectsTitle": "Ir a la sección de proyectos",
+        "hero.contactTitle": "Ir a la sección de contacto",
+
+        "social.linkedinTitle": "Abrir perfil de LinkedIn en una nueva pestaña",
+        "social.githubTitle": "Abrir perfil de GitHub en una nueva pestaña",
+
+        "contact.emailTitle": "Enviar un correo electrónico",
+        "contact.emailToTitle": "Enviar un correo electrónico a Miguel Carmona",
+
+        "footer.homeTitle": "Volver al inicio",
+        "footer.projectsTitle": "Ver proyectos",
+        "footer.contactTitle": "Ver contacto",
+        "footer.scrollTopTitle": "Volver arriba",
 
         "about.kicker": "Sobre mí",
         "about.title": "Desarrollo soluciones, no solo código.",
@@ -168,11 +181,23 @@ const translations = {
         "projects.reset": "Restablecer",
         "projects.code": "Código",
         "projects.preview": "Vista previa",
+        "projects.visualPreview": "Vista previa visual del proyecto",
+        "projects.codeTitle": "Ver código del proyecto",
+        "projects.codeUnavailable": "Código del proyecto no disponible",
+        "projects.previewTitle": "Ver vista previa del proyecto",
+        "projects.previewUnavailable": "Vista previa del proyecto no disponible",
 
         "usefulSites.kicker": "Sitios útiles",
         "usefulSites.photopea": "Editor de imágenes en línea, útil para realizar ediciones rápidas sin instalar software.",
         "usefulSites.textCompare": "Herramienta para comparar rápidamente dos textos y detectar diferencias.",
         "usefulSites.unminify": "Utilidad para volver más legible código minificado y facilitar su revisión.",
+        "usefulSites.visit": "Ir al sitio",
+        "usefulSites.photopeaTitle": "Abrir Photopea en una nueva pestaña",
+        "usefulSites.textCompareTitle": "Abrir Text Compare en una nueva pestaña",
+        "usefulSites.unminifyTitle": "Abrir Unminify en una nueva pestaña",
+        "usefulSites.photopeaAlt": "Logo de Photopea",
+        "usefulSites.textCompareAlt": "Logo de Text Compare",
+        "usefulSites.unminifyAlt": "Logo de Unminify",
 
         "services.kicker": "Servicios",
         "services.title": "En qué puedo ayudarte",
@@ -189,7 +214,7 @@ const translations = {
 
         "footer.rights": "Todos los derechos reservados.",
         "footer.home": "Inicio",
-        "footer.projects": "Stack técnico",
+        "footer.projects": "Proyectos",
         "footer.usefulSites": "Sitios útiles",
         "footer.contact": "Contacto"
     },
@@ -201,6 +226,24 @@ const translations = {
         "nav.projects": "Projects",
         "nav.usefulSites": "Useful sites",
         "nav.contact": "Contact",
+        "nav.mainLabel": "Main navigation",
+        "nav.technologiesTitle": "View technologies",
+        "nav.experienceTitle": "View experience",
+        "nav.projectsTitle": "View projects",
+        "nav.usefulSitesTitle": "View useful sites",
+        "nav.contactTitle": "View contact",
+
+        "header.homeLabel": "Go to home — Miguel Carmona",
+        "header.homeTitle": "Go to home",
+        "header.logoAlt": "Miguel Carmona logo",
+        "header.logoTitle": "Miguel Carmona logo",
+
+        "language.toggleLabel": "Switch to Spanish",
+        "language.toggleTitle": "Switch to Spanish",
+
+        "theme.toggleLabel": "Switch between light and dark theme",
+        "theme.light": "Switch to light theme",
+        "theme.dark": "Switch to dark theme",
 
         "hero.iam": "I'm",
         "hero.name": "Miguel Carmona",
@@ -210,6 +253,19 @@ const translations = {
         "hero.projectsButton": "View my projects",
         "hero.contactButton": "Contact me",
         "hero.downloadCv": "Download CV",
+        "hero.projectsTitle": "Go to projects section",
+        "hero.contactTitle": "Go to contact section",
+
+        "social.linkedinTitle": "Open LinkedIn profile in a new tab",
+        "social.githubTitle": "Open GitHub profile in a new tab",
+
+        "contact.emailTitle": "Send an email",
+        "contact.emailToTitle": "Send an email to Miguel Carmona",
+
+        "footer.homeTitle": "Go back to home",
+        "footer.projectsTitle": "View projects",
+        "footer.contactTitle": "View contact",
+        "footer.scrollTopTitle": "Back to top",
 
         "about.kicker": "About me",
         "about.title": "I build solutions, not just code.",
@@ -256,11 +312,23 @@ const translations = {
         "projects.reset": "Reset",
         "projects.code": "Code",
         "projects.preview": "Preview",
+        "projects.visualPreview": "Visual preview of project",
+        "projects.codeTitle": "View project code",
+        "projects.codeUnavailable": "Project code unavailable",
+        "projects.previewTitle": "View project preview",
+        "projects.previewUnavailable": "Project preview unavailable",
 
         "usefulSites.kicker": "Useful sites",
         "usefulSites.photopea": "Online image editor, useful for quick edits without installing software.",
         "usefulSites.textCompare": "A tool for quickly comparing two texts and spotting differences.",
         "usefulSites.unminify": "A utility for making minified code easier to read and review.",
+        "usefulSites.visit": "Go to site",
+        "usefulSites.photopeaTitle": "Open Photopea in a new tab",
+        "usefulSites.textCompareTitle": "Open Text Compare in a new tab",
+        "usefulSites.unminifyTitle": "Open Unminify in a new tab",
+        "usefulSites.photopeaAlt": "Photopea logo",
+        "usefulSites.textCompareAlt": "Text Compare logo",
+        "usefulSites.unminifyAlt": "Unminify logo",
 
         "services.kicker": "Services",
         "services.title": "How I can help",
@@ -298,8 +366,12 @@ function updateTheme() {
     const dark = isDark();
 
     document.documentElement.classList.toggle("dark", dark);
-    themeToggle.setAttribute("aria-label", dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
-    themeToggle.title = dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro";
+    const themeLanguage = document.documentElement.lang === "en" ? "en" : "es";
+    const dictionary = translations[themeLanguage];
+    const themeText = dark ? dictionary["theme.light"] : dictionary["theme.dark"];
+
+    themeToggle.setAttribute("aria-label", themeText);
+    themeToggle.title = themeText;
 }
 
 themeToggle.addEventListener("click", () => {
@@ -336,6 +408,21 @@ function applyTranslations() {
         }
     });
 
+    document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+        const key = element.getAttribute("data-i18n-title");
+        if (dictionary[key]) element.title = dictionary[key];
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+        const key = element.getAttribute("data-i18n-alt");
+        if (dictionary[key]) element.alt = dictionary[key];
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+        const key = element.getAttribute("data-i18n-aria-label");
+        if (dictionary[key]) element.setAttribute("aria-label", dictionary[key]);
+    });
+
     const isSpanish = currentLanguage === "es";
 
     languageToggle.textContent = isSpanish ? "EN" : "ES";
@@ -343,6 +430,7 @@ function applyTranslations() {
     languageToggle.title = isSpanish ? "Cambiar a inglés" : "Switch to Spanish";
 
     document.documentElement.lang = currentLanguage;
+    updateTheme();
 }
 
 languageToggle.addEventListener("click", () => {
@@ -352,7 +440,6 @@ languageToggle.addEventListener("click", () => {
     renderProjects();
 });
 
-//document.addEventListener("DOMContentLoaded", applyTranslations);
 
 /* =========================================================
     PROJECTS
@@ -409,10 +496,9 @@ function renderProjects() {
 
     visible.forEach((project) => {
         const article = document.createElement("article");
-
         article.className = "project-card";
         article.innerHTML = `
-            <div class="project-image" role="img" aria-label="Vista previa visual del proyecto ${project.title}" title="Vista previa visual de ${project.title}">
+            <div class="project-image" role="img" aria-label="${dictionary["projects.visualPreview"]} ${project.title}" title="${dictionary["projects.visualPreview"]} ${project.title}">
                 <div class="project-image-placeholder" aria-hidden="true">
                     ${projectPreview()}
                 </div>
@@ -420,51 +506,51 @@ function renderProjects() {
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
-                <div class="project-tags">${project.tags.map((tag) =>`<span class="project-tag">${tag}</span>`).join("")}</div>
+                <div class="project-tags">
+                    ${project.tags.map((tag) => `<span class="project-tag">${tag}</span>`).join("")}
+                </div>
                 <div class="project-footer">
-                    ${project.code && project.code !== "#" 
-                        ? `
-                            <a href="${project.code}" target="_blank" rel="noopener" class="project-link" title="Ver código del proyecto">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="m8 9-3 3 3 3"></path>
-                                    <path d="m16 9 3 3-3 3"></path>
-                                    <path d="m14 5-4 14"></path>
-                                </svg>
-                                ${dictionary["projects.code"]}
-                            </a>
-                        ` : `
-                            <a href="#" class="project-link" title="Código del proyecto no disponible" aria-disabled="true" onclick="return false;">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="m8 9-3 3 3 3"></path>
-                                    <path d="m16 9 3 3-3 3"></path>
-                                    <path d="m14 5-4 14"></path>
-                                </svg>
-                                ${dictionary["projects.code"]}
-                            </a>
-                        `
-                    }
+                ${project.code && project.code !== "#" ? `
+                    <a href="${project.code}" target="_blank" rel="noopener" class="project-link" title="${dictionary["projects.codeTitle"]}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="m8 9-3 3 3 3"></path>
+                            <path d="m16 9 3 3-3 3"></path>
+                            <path d="m14 5-4 14"></path>
+                        </svg>
+                        ${dictionary["projects.code"]}
+                    </a>
+                ` : `
+                    <a href="#" class="project-link" title="${dictionary["projects.codeUnavailable"]}" aria-disabled="true" onclick="return false;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="m8 9-3 3 3 3"></path>
+                            <path d="m16 9 3 3-3 3"></path>
+                            <path d="m14 5-4 14"></path>
+                        </svg>
+                        ${dictionary["projects.code"]}
+                    </a>
+                `
+                }
 
-                    ${project.preview && project.preview !== "#"
-                        ? `
-                            <a href="${project.preview}" target="_blank" rel="noopener" class="project-link primary" title="Ver vista previa del proyecto">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="M14 3h7v7"></path>
-                                    <path d="M10 14 21 3"></path>
-                                    <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
-                                </svg>
-                                ${dictionary["projects.preview"]}
-                            </a>
-                        ` : `
-                            <a href="#" class="project-link primary" title="Vista previa del proyecto no disponible" aria-disabled="true" onclick="return false;">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="M14 3h7v7"></path>
-                                    <path d="M10 14 21 3"></path>
-                                    <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
-                                </svg>
-                                ${dictionary["projects.preview"]}
-                            </a>
-                        `
-                    }
+                ${project.preview && project.preview !== "#" ? `
+                    <a href="${project.preview}" target="_blank" rel="noopener" class="project-link primary" title="${dictionary["projects.previewTitle"]}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="M14 3h7v7"></path>
+                            <path d="M10 14 21 3"></path>
+                            <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+                        </svg>
+                        ${dictionary["projects.preview"]}
+                    </a>
+                ` : `
+                    <a href="#" class="project-link primary" title="${dictionary["projects.previewUnavailable"]}" aria-disabled="true" onclick="return false;" >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="M14 3h7v7"></path>
+                            <path d="M10 14 21 3"></path>
+                            <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+                        </svg>
+                        ${dictionary["projects.preview"]}
+                    </a>
+                `
+                }
                 </div>
             </div>
         `;
@@ -487,36 +573,22 @@ function renderProjects() {
     }
 }
 
+/*
 loadMoreButton.addEventListener("click", () => {
-        visibleCount += 2;
-        renderProjects();
-    }
-);
+    visibleCount += 2;
+    renderProjects();
+});
 
-resetProjectsButton.addEventListener(
-    "click",
-    () => {
+resetProjectsButton.addEventListener("click", () => {
+    activeFilter = "all";
+    visibleCount = 2;
+    document.querySelectorAll(".filter-button").forEach((button) =>
+        button.classList.toggle("active", button.dataset.filter === "all")
+    );
 
-        activeFilter = "all";
-
-        visibleCount = 2;
-
-        document
-            .querySelectorAll(
-                ".filter-button"
-            )
-            .forEach(
-                (button) =>
-                    button.classList.toggle(
-                        "active",
-                        button.dataset.filter ===
-                        "all"
-                    )
-            );
-
-        renderProjects();
-    }
-);
+    renderProjects();
+});
+*/
 
 document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -527,7 +599,7 @@ document.querySelectorAll(".filter-button").forEach((button) => {
             item.classList.toggle("active", item === button)
         );
 
-        renderProjects();
+        //renderProjects();
     });
 });
 
@@ -678,6 +750,6 @@ navLinks.forEach((link) => {
 document.getElementById("year").textContent = new Date().getFullYear();
 
 applyTranslations();
-renderProjects();
+//renderProjects();
 updateTheme();
 updateScrollButton();

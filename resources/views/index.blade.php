@@ -9,7 +9,7 @@
             {{-- @include('partials.about-me') --}}
             @include('partials.skills')
             @include('partials.work-experience')
-            @include('partials.projects')
+            {{-- @include('partials.projects') --}}
             @include('partials.services')
             @include('partials.useful-sites')
             {{-- @include('partials.contact') --}}

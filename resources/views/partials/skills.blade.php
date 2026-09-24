@@ -27,12 +27,12 @@
                 </div>
                 <h3 data-i18n="tech.languages">Lenguajes & Frameworks</h3>
                 <div class="tech-list">
-                    <span class="tech-pill">Laravel</span>
-                    <span class="tech-pill">PHP</span>
-                    <span class="tech-pill">Rest APIs</span>
-                    <span class="tech-pill">JavaScript</span>
-                    <span class="tech-pill">Html</span>
-                    <span class="tech-pill">CSS</span>
+                    <span class="tech-pill" role="listitem">Laravel</span>
+                    <span class="tech-pill" role="listitem">PHP</span>
+                    <span class="tech-pill" role="listitem">Rest APIs</span>
+                    <span class="tech-pill" role="listitem">JavaScript</span>
+                    <span class="tech-pill" role="listitem">Html</span>
+                    <span class="tech-pill" role="listitem">CSS</span>
                 </div>
             </article>
 
@@ -47,8 +47,8 @@
                 </div>
                 <h3 data-i18n="tech.database">Bases de datos</h3>
                 <div class="tech-list">
-                    <span class="tech-pill">MySQL</span>
-                    <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill" role="listitem">MySQL</span>
+                    <span class="tech-pill" role="listitem">PostgreSQL</span>
                 </div>
             </article>
 
@@ -65,15 +65,15 @@
                 </div>
                 <h3 data-i18n="tech.devops">Herramientas e Infraestructura</h3>
                 <div class="tech-list">
-                    <span class="tech-pill">Docker</span>
-                    <span class="tech-pill">Linux</span>
-                    <span class="tech-pill">Git</span>
-                    <span class="tech-pill">GitHub</span>
-                    <span class="tech-pill">Gitlab</span>
-                    <span class="tech-pill">Postman</span>
-                    <span class="tech-pill">Composer</span>
-                    <span class="tech-pill">Nginx</span>
-                    <span class="tech-pill">Apache</span>
+                    <span class="tech-pill" role="listitem">Docker</span>
+                    <span class="tech-pill" role="listitem">Linux</span>
+                    <span class="tech-pill" role="listitem">Git</span>
+                    <span class="tech-pill" role="listitem">GitHub</span>
+                    <span class="tech-pill" role="listitem">Gitlab</span>
+                    <span class="tech-pill" role="listitem">Postman</span>
+                    <span class="tech-pill" role="listitem">Composer</span>
+                    <span class="tech-pill" role="listitem">Nginx</span>
+                    <span class="tech-pill" role="listitem">Apache</span>
                 </div>
             </article>
         </div>

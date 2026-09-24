@@ -5,13 +5,13 @@
         <div class="contact-box">
             <h2 data-i18n="contact.title">¿Tienes un proyecto o una oportunidad?</h2>
             <p data-i18n="contact.description">Si buscas alguien que pueda trabajar sobre una aplicación existente, resolver problemas o desarrollar nuevas funcionalidades con PHP y Laravel, podemos hablar.</p>
-            <a href="mailto:tu-correo@example.com" class="button button-primary" title="Enviar un correo electrónico" data-i18n="contact.button">Hablemos
+            <a href="mailto:tu-correo@example.com" class="button button-primary" data-i18n-title="contact.emailTitle" title="Enviar un correo electrónico" data-i18n="contact.button">Hablemos
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M4 4h16v16H4z"></path>
                     <path d="m4 7 8 5 8-5"></path>
                 </svg>
             </a>
-            <a href="mailto:tu-correo@example.com" class="contact-email" title="Enviar un correo electrónico a Miguel Carmona">tu-correo@example.com</a>
+            <a href="mailto:tu-correo@example.com" class="contact-email" data-i18n-title="contact.emailToTitle" title="Enviar un correo electrónico a Miguel Carmona">tu-correo@example.com</a>
         </div>
     </div>
 </section>
