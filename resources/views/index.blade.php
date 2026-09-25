@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ request()->route('lang') ?? 'es' }}">
     @include('partials.head')
     <body>
         <a class="skip-link" href="#main-content">Saltar al contenido principal</a>

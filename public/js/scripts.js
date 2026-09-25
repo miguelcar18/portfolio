@@ -394,8 +394,15 @@ mediaQuery.addEventListener("change", (event) => {
     LANGUAGE
 ========================================================= */
 
-let currentLanguage = localStorage.getItem("language") || "es";
 const languageToggle = document.getElementById("languageToggle");
+
+function getLanguageFromUrl() {
+    const path = window.location.pathname.split("/").filter(Boolean);
+    const language = path[0];
+    return ["es", "en"].includes(language) ? language : "es";
+}
+
+let currentLanguage = getLanguageFromUrl();
 
 function applyTranslations() {
     const dictionary = translations[currentLanguage];
@@ -410,17 +417,26 @@ function applyTranslations() {
 
     document.querySelectorAll("[data-i18n-title]").forEach((element) => {
         const key = element.getAttribute("data-i18n-title");
-        if (dictionary[key]) element.title = dictionary[key];
+
+        if (dictionary[key]) {
+            element.title = dictionary[key];
+        }
     });
 
     document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
         const key = element.getAttribute("data-i18n-alt");
-        if (dictionary[key]) element.alt = dictionary[key];
+
+        if (dictionary[key]) {
+            element.alt = dictionary[key];
+        }
     });
 
     document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
         const key = element.getAttribute("data-i18n-aria-label");
-        if (dictionary[key]) element.setAttribute("aria-label", dictionary[key]);
+
+        if (dictionary[key]) {
+            element.setAttribute("aria-label", dictionary[key]);
+        }
     });
 
     const isSpanish = currentLanguage === "es";
@@ -434,10 +450,8 @@ function applyTranslations() {
 }
 
 languageToggle.addEventListener("click", () => {
-    currentLanguage = currentLanguage === "es" ? "en" : "es";
-    localStorage.setItem("language", currentLanguage);
-    applyTranslations();
-    renderProjects();
+    const newLanguage = currentLanguage === "es" ? "en" : "es";
+    window.location.href = `/${newLanguage}`;
 });
 
 
